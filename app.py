@@ -7,7 +7,7 @@ import pandas as pd
 # PAGE CONFIG
 # ─────────────────────────────────────────────
 st.set_page_config(
-    page_title="Laptop Price Predictor",
+    page_title="Spec2Price",
     layout="centered",
 )
 
@@ -54,7 +54,8 @@ def preprocess(raw: dict) -> pd.DataFrame:
 # ─────────────────────────────────────────────
 # UI
 # ─────────────────────────────────────────────
-st.title("Laptop Price Predictor")
+st.title("Spec2Price")
+st.markdown("Laptop Price Predictor")
 st.markdown("Estimate a laptop's market price using **Gradient Boosting** (R² = 0.93).")
 st.divider()
 
