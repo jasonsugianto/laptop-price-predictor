@@ -62,7 +62,7 @@ with col1:
     "fujitsu", "lg", "walker", "axl"
     ])
     os = st.selectbox("Operating System", ["windows", "mac", "dos", "android", "chrome", "ubuntu", "other"])
-    year_warranty = st.selectbox("Warranty (years)", [1, 2, 3])
+    year_warranty = st.selectbox("Warranty (years)", [1, 2, 3, "No information"])
 
 with col2:
     st.subheader("Processor")
@@ -75,25 +75,25 @@ with col2:
     "m1", "m2", "m3",
     "celeron", "pentium", "other"
     ])
-    num_cores = st.slider("Number of Cores",   2, 24, 8)
-    num_threads = st.slider("Number of Threads", 2, 32, 16)
+    num_cores = st.slider("Number of Cores",   2, 24, 6)
+    num_threads = st.slider("Number of Threads", 0, 32, 12)
 
 st.divider()
 col3, col4 = st.columns(2)
 
 with col3:
     st.subheader("Memory & Storage")
-    ram_memory = st.selectbox("RAM (GB)", [4, 8, 12, 16, 24, 32, 64, 128])
+    ram_memory = st.selectbox("RAM (GB)", [2, 4, 8, 12, 16, 24, 32, 36, 64])
     primary_storage_type = st.selectbox("Primary Storage Type", ["SSD", "HDD"])
-    primary_storage_capacity = st.selectbox("Primary Storage (GB)", [128, 256, 512, 1024, 2000])
+    primary_storage_capacity = st.selectbox("Primary Storage (GB)", [32, 64, 128, 256, 512, 1024, 2048])
     secondary_storage_type = st.selectbox("Secondary Storage Type", ["No secondary storage", "SSD"])
-    secondary_storage_capacity = st.selectbox("Secondary Storage (GB)", [0, 512, 1024, 2048])
+    secondary_storage_capacity = st.selectbox("Secondary Storage (GB)", [0, 128, 256, 512])
 
 with col4:
     st.subheader("Display & GPU")
-    display_size = st.selectbox("Display Size (inches)", [11.6, 12.4, 13.3, 13.6, 14.0, 14.2, 15.6, 16.0, 16.2, 17.3])
-    resolution_width = st.selectbox("Resolution Width",  [1280, 1366, 1920, 2160, 2560, 2880, 3840])
-    resolution_height = st.selectbox("Resolution Height", [800, 768, 1080, 1200, 1440, 1800, 2160])
+    display_size = st.selectbox("Display Size (inches)", [10.1, 11.6, 12.4, 13.0, 13.3, 13.4, 13.5, 13.6, 14.0, 14.1, 14.2, 14.5, 15.0, 15.3, 15.6, 16.0, 16.1, 16.2, 17.3, 18.0])
+    resolution_width = st.selectbox("Resolution Width",  [1080, 1200, 1280, 1366, 1440, 1536, 1600, 1920, 2048, 2160, 2240, 2256, 2560, 2880, 3000, 3024, 3072, 3200, 3456, 3840])
+    resolution_height = st.selectbox("Resolution Height", [768, 800, 1024, 1080, 1200, 1400, 1440, 1504, 1536, 1600, 1620, 1660, 1664, 1800, 1864, 1920, 1964, 2000, 2160, 2234, 2400, 2560])
     gpu_brand = st.selectbox("GPU Brand", ["intel", "amd", "apple", "nvidia", "arm"])
     gpu_type = st.selectbox("GPU Type",  ["integrated", "dedicated", "apple"])
     is_touch_screen = st.checkbox("Touchscreen")
