@@ -93,7 +93,7 @@ with col4:
     st.subheader("Display & GPU")
     display_size = st.selectbox("Display Size (inches)", [11.6, 12.4, 13.3, 13.6, 14.0, 14.2, 15.6, 16.0, 16.2, 17.3])
     resolution_width = st.selectbox("Resolution Width",  [1280, 1366, 1920, 2160, 2560, 2880, 3840])
-    resolution_height = st.selectbox("Resolution Height", [800,  768,  1080, 1200, 1440, 1800, 2160])
+    resolution_height = st.selectbox("Resolution Height", [800, 768, 1080, 1200, 1440, 1800, 2160])
     gpu_brand = st.selectbox("GPU Brand", ["intel", "amd", "apple", "nvidia", "arm"])
     gpu_type = st.selectbox("GPU Type",  ["integrated", "dedicated", "apple"])
     is_touch_screen = st.checkbox("Touchscreen")
