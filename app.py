@@ -62,7 +62,7 @@ with col1:
     "fujitsu", "lg", "walker", "axl"
     ])
     os = st.selectbox("Operating System", ["windows", "mac", "dos", "android", "chrome", "ubuntu", "other"])
-    year_warranty = st.selectbox("Warranty (years)", [1, 2, 3, "No information"])
+    year_warranty = st.selectbox("Warranty (years)", [1, 2, 3])
 
 with col2:
     st.subheader("Processor")
